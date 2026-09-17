@@ -318,7 +318,7 @@
       if (/\[\[TODO/.test(action)) {
         // No backend wired yet: keep the conversion flow testable.
         e.preventDefault();
-        window.location.href = '/thanks';
+        window.location.href = '/thanks/';
         return;
       }
       var btn = form.querySelector('[type="submit"]');

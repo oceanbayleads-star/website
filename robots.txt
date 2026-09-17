@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /thanks
+Disallow: /thanks/
 Disallow: /404
-Disallow: /redirect
+Disallow: /redirect/
 
 # AI search crawlers are welcome
 User-agent: GPTBot
