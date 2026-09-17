@@ -1,0 +1,14 @@
+# Raw client materials (HEIC/MOV, ~3 GB) — converted assets live in /assets
+ocean-bay-seo-local-materials/
+
+# Working docs / briefs (not part of the deployed site)
+ONE PAGE - OCEAN BAY INTERIORS.md
+PROMPT-ONEPAGE.md
+INFOS.txt
+TODO-CLIENTE.md
+LOGO/
+
+# Tooling
+.claude/
+.DS_Store
+Thumbs.db
