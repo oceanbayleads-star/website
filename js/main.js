@@ -314,13 +314,7 @@
       if (firstBad) { e.preventDefault(); firstBad.focus(); return; }
       if (form.querySelector('.hp input, input.hp') && form.querySelector('input.hp').value) { e.preventDefault(); return; }
 
-      var action = form.getAttribute('action') || '';
-      if (/\[\[TODO/.test(action)) {
-        // No backend wired yet: keep the conversion flow testable.
-        e.preventDefault();
-        window.location.href = '/thanks/';
-        return;
-      }
+      // Web3Forms handles the POST and redirects to /thanks/ (hidden "redirect" field).
       var btn = form.querySelector('[type="submit"]');
       if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
     });

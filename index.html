@@ -80,7 +80,11 @@
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom closets", "serviceType": "Custom cabinetry", "areaServed": "Little River, SC", "url": "https://oceanbayinteriors.com/#services" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home office storage and workstations", "serviceType": "Custom cabinetry", "areaServed": "Little River, SC", "url": "https://oceanbayinteriors.com/#services" } }
         ],
-        "sameAs": ["https://www.google.com/maps/place/?cid=1229193052149989524"],
+        "sameAs": [
+          "https://www.google.com/maps/place/?cid=1229193052149989524",
+          "https://www.instagram.com/oceanbayinteriors/",
+          "https://www.facebook.com/Oceanbayinteriors/"
+        ],
         "priceRange": "$$$",
         "knowsAbout": ["Custom cabinets", "Custom kitchen cabinets", "Bathroom vanities", "Built-ins", "Entertainment centers", "Custom closets", "Home office cabinetry", "Custom woodworking"]
       },
@@ -142,8 +146,8 @@
         <a class="topbar__item" href="mailto:contact@oceanbayinteriors.com"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>contact@oceanbayinteriors.com</a>
         <a class="topbar__item" href="tel:+19082512855"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.6 2.6.7a2 2 0 0 1 1.7 2z"/></svg>(908) 251-2855</a>
         <span class="topbar__social">
-          <a href="[[TODO: Instagram URL]]" aria-label="Instagram" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
-          <a href="[[TODO: Facebook URL]]" aria-label="Facebook" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/oceanbayinteriors/" aria-label="Instagram" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+          <a href="https://www.facebook.com/Oceanbayinteriors/" aria-label="Facebook" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
         </span>
       </span>
     </div>
@@ -626,10 +630,12 @@
         <div class="form-card form-card--accent">
           <h3 class="form-card__title">Request your consultation</h3>
           <p class="form-card__lead">Takes one minute. We reply within one business day.</p>
-          <!-- [[TODO: form backend]] Set action to the form endpoint (Web3Forms / Formspree / custom). Must redirect to /thanks. -->
-          <form class="form" id="form01" action="[[TODO: form endpoint]]" method="POST" novalidate>
-            <input type="hidden" name="redirect" value="https://oceanbayinteriors.com/thanks/">
+          <form class="form" id="form01" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="9529c2eb-b34f-41ac-8444-694b8ee97bd9">
+            <input type="hidden" name="from_name" value="Ocean Bay Interiors — Website">
             <input type="hidden" name="subject" value="New consultation request from oceanbayinteriors.com">
+            <input type="hidden" name="redirect" value="https://oceanbayinteriors.com/thanks/">
+            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none !important" aria-hidden="true">
             <label class="hp" for="company">Company (leave blank)</label>
             <input class="hp" type="text" id="company" name="company" tabindex="-1" autocomplete="off">
 
@@ -714,9 +720,8 @@
         <p class="footer__tagline">Custom cabinets <em>built for life.</em></p>
         <p>Family-owned custom carpentry and cabinetry. Designed, built and installed in-house in Little River, South Carolina.</p>
         <div class="footer__social">
-          <!-- [[TODO: social links]] -->
-          <a href="[[TODO: Instagram URL]]" aria-label="Instagram" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
-          <a href="[[TODO: Facebook URL]]" aria-label="Facebook" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/oceanbayinteriors/" aria-label="Instagram" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+          <a href="https://www.facebook.com/Oceanbayinteriors/" aria-label="Facebook" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           <a href="https://www.google.com/maps/place/?cid=1229193052149989524" aria-label="Google Business Profile" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
