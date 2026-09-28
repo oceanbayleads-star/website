@@ -68,7 +68,15 @@
           { "@type": "City", "name": "Little River" },
           { "@type": "City", "name": "North Myrtle Beach" },
           { "@type": "City", "name": "Myrtle Beach" },
-          { "@type": "City", "name": "Conway" }
+          { "@type": "City", "name": "Conway" },
+          { "@type": "City", "name": "Murrells Inlet" },
+          { "@type": "City", "name": "Pawleys Island" },
+          { "@type": "City", "name": "Georgetown" },
+          { "@type": "City", "name": "Shallotte" },
+          { "@type": "City", "name": "Oak Island" },
+          { "@type": "City", "name": "Southport" },
+          { "@type": "City", "name": "Leland" },
+          { "@type": "City", "name": "Wilmington" }
         ],
         "geo": { "@type": "GeoCoordinates", "latitude": 33.8732, "longitude": -78.6142 },
         "hasMap": "https://www.google.com/maps/place/?cid=1229193052149989524",
@@ -163,7 +171,7 @@
         <a href="#top">Home</a>
         <a href="#services">Services</a>
         <a href="#about">About us</a>
-        <a href="#portfolio">Gallery</a>
+        <a href="/gallery/">Gallery</a>
       </nav>
 
       <div class="nav__right">
@@ -181,7 +189,7 @@
     <a href="#top">Home</a>
     <a href="#services">Services</a>
     <a href="#about">About us</a>
-    <a href="#portfolio">Gallery</a>
+    <a href="/gallery/">Gallery</a>
     <a class="nav-drawer__phone" href="tel:+19082512855">Call (908) 251-2855</a>
     <a class="btn btn-primary" href="#contact">Get a free consultation<svg class="arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
@@ -577,6 +585,7 @@
         </div>
 
         <div class="section__cta section__cta--center">
+          <a class="btn btn-outline" href="/gallery/">See every project, 3D to finished</a>
           <a class="btn btn-dark" href="#contact">Start building your cabinet project<svg class="arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
@@ -691,14 +700,14 @@
             <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><strong>Based in:</strong> Little River, South Carolina</span></li>
           </ul>
           <h3 class="info-card__title">Service areas</h3>
-          <!-- [[TODO: confirm service area]] -->
-          <p class="info-card__note">Little River and the Grand Strand, from Loris to Surfside Beach.</p>
-          <!-- Pins are read from data-pins; Leaflet loads only when the map scrolls into view. -->
-          <div class="info-map" id="area-map" role="img" aria-label="Map of the service area with pins on Little River, North Myrtle Beach, Myrtle Beach, Conway, Longs, Loris and Surfside Beach"
-               data-center="33.83,-78.84" data-zoom="10"
-               data-pins='[["Little River",33.8732,-78.6142,true],["North Myrtle Beach",33.8160,-78.6800],["Myrtle Beach",33.6891,-78.8867],["Conway",33.8360,-79.0478],["Longs",33.9207,-78.7450],["Loris",34.0563,-78.8903],["Surfside Beach",33.6060,-78.9731]]'>
+          <p class="info-card__note">The coast from Wilmington, NC down to Georgetown, SC, including Myrtle Beach, Conway and Brunswick County.</p>
+          <!-- Pins are read from data-pins, the dotted outline from data-area; Leaflet loads only when the map scrolls into view. -->
+          <div class="info-map" id="area-map" role="img" aria-label="Map of the service area, outlined from Wilmington, NC to Georgetown, SC, with pins on Little River, Wilmington, Leland, Southport, Oak Island, Shallotte, North Myrtle Beach, Myrtle Beach, Conway, Murrells Inlet, Pawleys Island and Georgetown"
+               data-center="33.83,-78.60" data-zoom="8"
+               data-pins='[["Little River",33.8732,-78.6142,true],["Wilmington",34.2257,-77.9447],["Leland",34.2563,-78.0447],["Southport",33.9210,-78.0203],["Oak Island",33.9166,-78.1613],["Shallotte",33.9732,-78.3858],["North Myrtle Beach",33.8160,-78.6800],["Myrtle Beach",33.6891,-78.8867],["Conway",33.8360,-79.0478],["Murrells Inlet",33.5510,-79.0414],["Pawleys Island",33.4332,-79.1214],["Georgetown",33.3768,-79.2945]]'
+               data-area='[[34.47,-77.98],[34.43,-77.78],[34.24,-77.70],[34.02,-77.84],[33.86,-77.93],[33.82,-78.12],[33.80,-78.45],[33.70,-78.68],[33.58,-78.86],[33.44,-79.02],[33.30,-79.12],[33.20,-79.22],[33.22,-79.33],[33.40,-79.42],[33.70,-79.44],[34.00,-79.40],[34.28,-79.26],[34.45,-79.00],[34.54,-78.62],[34.54,-78.25]]'>
             <ul class="visually-hidden" role="list">
-              <li>Little River</li><li>North Myrtle Beach</li><li>Myrtle Beach</li><li>Conway</li><li>Longs</li><li>Loris</li><li>Surfside Beach</li>
+              <li>Little River</li><li>Wilmington</li><li>Leland</li><li>Southport</li><li>Oak Island</li><li>Shallotte</li><li>North Myrtle Beach</li><li>Myrtle Beach</li><li>Conway</li><li>Murrells Inlet</li><li>Pawleys Island</li><li>Georgetown</li>
             </ul>
           </div>
         </aside>
@@ -732,7 +741,7 @@
           <li><a href="#top">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#about">About us</a></li>
-          <li><a href="#portfolio">Gallery</a></li>
+          <li><a href="/gallery/">Gallery</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>

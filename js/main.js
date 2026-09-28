@@ -247,6 +247,12 @@
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       }).addTo(map);
+      // Service area: red dotted outline, drawn under the pins
+      var area = JSON.parse(areaMap.getAttribute('data-area') || '[]');
+      var outline = area.length ? L.polygon(area, {
+        color: '#e3262f', weight: 4, dashArray: '1 9', lineCap: 'round', lineJoin: 'round',
+        fillColor: '#e3262f', fillOpacity: 0.05, interactive: false
+      }).addTo(map) : null;
       pins.forEach(function (p) {
         var home = !!p[3];
         var icon = L.divIcon({
@@ -258,8 +264,9 @@
           .addTo(map)
           .bindTooltip(p[0], { permanent: home, direction: 'top', offset: [0, -12], className: 'map-label' });
       });
-      // Frame every pin with a little breathing room (labels included)
-      if (pins.length) map.fitBounds(pins.map(function (p) { return [p[1], p[2]]; }), { padding: [36, 36] });
+      // Frame the whole outline (or every pin) with a little breathing room (labels included)
+      if (outline) map.fitBounds(outline.getBounds(), { padding: [16, 16] });
+      else if (pins.length) map.fitBounds(pins.map(function (p) { return [p[1], p[2]]; }), { padding: [36, 36] });
     }
     function loadMap() {
       if (window.L) return initMap();
