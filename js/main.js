@@ -235,6 +235,25 @@
     });
   }
 
+  /* ---------- Google review cards: "Read more" only where the text is clamped ---------- */
+  var reviewCards = document.querySelectorAll('.greview');
+  function syncMore() {
+    reviewCards.forEach(function (c) {
+      if (c.classList.contains('is-open')) return;
+      var p = c.querySelector('.greview__text p');
+      c.querySelector('.greview__more').hidden = p.scrollHeight <= p.clientHeight + 2;
+    });
+  }
+  reviewCards.forEach(function (c) {
+    var btn = c.querySelector('.greview__more');
+    btn.addEventListener('click', function () {
+      var open = c.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(open));
+      btn.textContent = open ? 'Show less' : 'Read more';
+    });
+  });
+  if (reviewCards.length) { syncMore(); window.addEventListener('resize', syncMore); }
+
   /* ---------- Service-area map: Leaflet + OpenStreetMap, loaded on demand when the card is near the viewport ---------- */
   var areaMap = document.getElementById('area-map');
   if (areaMap) {

@@ -29,7 +29,6 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.trustindex.io">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Bitter:ital,wght@0,700;0,800;1,300;1,500&display=swap">
 
   <link rel="preload" as="image" href="/assets/video/hero-poster-720.jpg" media="(max-width: 47.99em)" fetchpriority="high">
@@ -285,13 +284,55 @@
           <h2 class="h2">What South Carolina homeowners <em>say about our work</em></h2>
         </div>
 
-        <!-- Google reviews via Trustindex: the loader renders the widget in place of this script tag. -->
-        <div class="reviews-widget">
-          <script defer async src="https://cdn.trustindex.io/loader.js?12d8e0d810dd623be0369a1016d"></script>
-        </div>
+        <!-- Google reviews, copied word for word from the Business Profile on 2026-09-28 (5.0, 5 reviews; the 5th is a rating without text). Update by hand when new reviews come in. -->
+        <div class="greviews">
+          <div class="greviews__summary">
+            <svg class="greviews__g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg>
+            <div class="greviews__score">
+              <strong>5.0</strong>
+              <span class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 120 24" aria-hidden="true"><defs><path id="st" d="M12 1.8l3.1 6.4 7 1-5 4.9 1.2 7L12 17.8 5.7 21.1l1.2-7-5-4.9 7-1z"/></defs><use href="#st"/><use href="#st" x="24"/><use href="#st" x="48"/><use href="#st" x="72"/><use href="#st" x="96"/></svg></span>
+              <span class="greviews__count">5 reviews on Google</span>
+            </div>
+            <div class="greviews__actions">
+              <a class="btn btn-outline" href="https://search.google.com/local/reviews?placeid=ChIJERlM-DlpAIkRlEDHgZH4DhE" target="_blank" rel="noopener">Read all on Google</a>
+              <a class="btn btn-dark" href="https://search.google.com/local/writereview?placeid=ChIJERlM-DlpAIkRlEDHgZH4DhE" target="_blank" rel="noopener">Write a review</a>
+            </div>
+          </div>
 
-        <div class="section__cta section__cta--center">
-          <a class="btn btn-dark" href="[[TODO: Google Business review link]]" rel="noopener">Share your experience</a>
+          <ul class="greviews__list" role="list">
+            <li>
+              <figure class="greview">
+                <figcaption class="greview__head"><span class="greview__avatar" aria-hidden="true">N</span><span><strong>Noah Sullivan</strong><small>Local Guide &middot; Google review</small></span></figcaption>
+                <span class="stars stars--sm" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 120 24" aria-hidden="true"><use href="#st"/><use href="#st" x="24"/><use href="#st" x="48"/><use href="#st" x="72"/><use href="#st" x="96"/></svg></span>
+                <blockquote class="greview__text"><p>Made three medicine cabinets [&hellip;], a closet cabinet, and two over the toilet cabinets [&hellip;] and installed them. Couldn&rsquo;t find sizes we needed in Home Depot/Lowes/amazon, so we had to explore custom builder. Gino and staff were EXTREMELY professional, kept in contact until completion, and came in at a better value than two other companies that came in at almost double the price! These cabinets look like they were built for this house though! Ocean Bay was the most economical option and a delight to work with to say the least. Definitely recommend!</p></blockquote>
+                <button type="button" class="greview__more" aria-expanded="false">Read more</button>
+              </figure>
+            </li>
+            <li>
+              <figure class="greview">
+                <figcaption class="greview__head"><span class="greview__avatar" aria-hidden="true">T</span><span><strong>Tha&iacute;s Clemente</strong><small>Google review</small></span></figcaption>
+                <span class="stars stars--sm" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 120 24" aria-hidden="true"><use href="#st"/><use href="#st" x="24"/><use href="#st" x="48"/><use href="#st" x="72"/><use href="#st" x="96"/></svg></span>
+                <blockquote class="greview__text"><p>Thrilled about installing the cabinets in our new kitchen and laundry room! The finish is excellent and the design perfectly complements the overall aesthetic. The ample storage space is well organized and practical. The installation team was qualified and completed the job efficiently. The new cabinets truly elevated the functionality and style of both spaces. Highly recommended for a perfect and attractive storage solution.</p></blockquote>
+                <button type="button" class="greview__more" aria-expanded="false">Read more</button>
+              </figure>
+            </li>
+            <li>
+              <figure class="greview">
+                <figcaption class="greview__head"><span class="greview__avatar" aria-hidden="true">L</span><span><strong>Livia L</strong><small>Google review</small></span></figcaption>
+                <span class="stars stars--sm" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 120 24" aria-hidden="true"><use href="#st"/><use href="#st" x="24"/><use href="#st" x="48"/><use href="#st" x="72"/><use href="#st" x="96"/></svg></span>
+                <blockquote class="greview__text"><p>The kitchen remodeling combined with the addition of new cabinets, truly transformed our space. The attention to detail in the design and layout is exceptional. Cabinets not only improve aesthetics but also provide efficient storage solutions for small kitchens like ours. The entire process was well managed and the result was incredible, as were the new flooring and finishes. Very pleased with the result that the AF1 and Ocean Bay interiors team offered us!</p></blockquote>
+                <button type="button" class="greview__more" aria-expanded="false">Read more</button>
+              </figure>
+            </li>
+            <li>
+              <figure class="greview">
+                <figcaption class="greview__head"><span class="greview__avatar" aria-hidden="true">H</span><span><strong>Hugo Miguel Do Carmo</strong><small>Google review</small></span></figcaption>
+                <span class="stars stars--sm" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 120 24" aria-hidden="true"><use href="#st"/><use href="#st" x="24"/><use href="#st" x="48"/><use href="#st" x="72"/><use href="#st" x="96"/></svg></span>
+                <blockquote class="greview__text"><p>These new kitchen cabinets are a game changer! The quality is exceptional and the design perfectly complements our space. Ample storage and clever organization made our daily routine a breeze. Installation went smoothly and the durability is impressive. We are very pleased with this change, an investment that is certainly worth it.</p></blockquote>
+                <button type="button" class="greview__more" aria-expanded="false">Read more</button>
+              </figure>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -329,7 +370,7 @@
               <p>Avoid moisture damage with our custom bathroom vanities and linen towers made from solid, moisture-resistant woods. Our designs maximize space and withstand humid conditions.</p>
               <a class="link-rule" href="#contact">Discuss this service <span aria-hidden="true">&rarr;</span></a>
             </div>
-            <img class="svc-card__image svc-card__image--bathroom" src="/assets/img/svc-bathroom-900.webp" srcset="/assets/img/svc-bathroom-600.webp 600w, /assets/img/svc-bathroom-900.webp 900w" sizes="(min-width: 48em) 260px, 92vw" width="900" height="675" loading="lazy" decoding="async" alt="White custom bathroom vanity with a marble top and brass faucet against patterned wallpaper, Little River, SC">
+            <img class="svc-card__image svc-card__image--bathroom" src="/assets/img/svc-bathroom-900.webp" srcset="/assets/img/svc-bathroom-600.webp 600w, /assets/img/svc-bathroom-900.webp 900w" sizes="(min-width: 48em) 260px, 92vw" width="900" height="675" loading="lazy" decoding="async" alt="Navy custom bathroom vanity with shaker drawers, white quartz top and patterned tile backsplash, Little River, SC">
           </article>
           <article class="svc-card">
             <div class="svc-card__content">
@@ -373,6 +414,46 @@
         <div class="section__cta section__cta--center">
           <a class="btn btn-dark" href="#contact">Explore custom options for your space<svg class="arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
+      </div>
+    </section>
+
+    <!-- ============================== 3D DESIGN ============================== -->
+    <!-- Rotating 3D model drawn in SVG by js/cabinet3d.js (real dimensions of Larry's wall); fades to the install photo. -->
+    <section class="section section--dark design3d" id="design-3d" aria-labelledby="design3d-title">
+      <div class="container design3d__grid reveal">
+        <div class="design3d__text">
+          <span class="kicker">In-house 3D design</span>
+          <h2 class="h2" id="design3d-title">See your cabinets <em>before we build them.</em></h2>
+          <p class="lead">Before a single board is cut, we model your project in 3D, to scale, for your actual room. You approve every shelf, door and dimension on screen, and that is exactly what gets installed in your home.</p>
+          <ul class="design3d__points" role="list">
+            <li><span class="seal seal--sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Drawn to your room's exact measurements</li>
+            <li><span class="seal seal--sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Adjust layout and details before production</li>
+            <li><span class="seal seal--sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>The same drawings go straight to our shop</li>
+          </ul>
+          <a class="btn btn-primary" href="#contact">Start your 3D design<svg class="arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+
+        <figure class="model3d" data-model3d>
+          <div class="model3d__stage" tabindex="0" role="group" aria-label="Interactive 3D model of Larry's display wall. Drag or use the arrow keys to rotate it; scroll, pinch or use plus and minus to zoom.">
+            <svg class="model3d__svg" viewBox="0 0 1200 1200" aria-hidden="true">
+              <defs><filter id="m3-soft" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="16"/></filter></defs>
+              <g class="model3d__layer"></g>
+            </svg>
+            <img class="model3d__photo" src="/assets/img/design3d-real-1200.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="The finished white display wall installed in Larry's home, matching the 3D design">
+            <span class="model3d__tag" aria-hidden="true"><span class="model3d__tag-3d">3D design</span><span class="model3d__tag-real">Installed</span></span>
+            <span class="model3d__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Drag to rotate &middot; scroll or pinch to zoom</span>
+            <div class="model3d__zoom" role="group" aria-label="Zoom">
+              <button type="button" data-zoom="in" aria-label="Zoom in"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+              <button type="button" data-zoom="out" aria-label="Zoom out"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/></svg></button>
+              <button type="button" data-zoom="reset" class="model3d__zoom-reset" aria-label="Reset zoom"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 15v5h-5M4 4l6 6M20 20l-6-6"/></svg></button>
+            </div>
+          </div>
+          <div class="model3d__controls">
+            <button type="button" class="model3d__btn" data-doors aria-pressed="false">Open the doors</button>
+            <button type="button" class="model3d__btn model3d__btn--accent" data-photo aria-pressed="false">See it installed</button>
+          </div>
+          <figcaption class="model3d__cap">Larry's display wall, modeled at real scale from his approved design. Spin it, open it, then see the finished install.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -509,7 +590,6 @@
           <div class="wall__row wall__row--right">
             <div class="wall__track">
               <figure class="wall__item" style="--ar:1.3333"><a href="/assets/gallery/kip-connelly-014-1200.webp" data-lb><img src="/assets/gallery/kip-connelly-014-480.webp" srcset="/assets/gallery/kip-connelly-014-480.webp 480w, /assets/gallery/kip-connelly-014-800.webp 800w" sizes="427px" width="480" height="360" loading="lazy" decoding="async" alt="Walnut floating shelves and white shaker base cabinets"></a></figure>
-              <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/konrady-005-1200.webp" data-lb><img src="/assets/gallery/konrady-005-480.webp" srcset="/assets/gallery/konrady-005-480.webp 480w, /assets/gallery/konrady-005-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="Custom white bathroom cabinetry and built-in display cabinets"></a></figure>
               <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/merry-008-1200.webp" data-lb><img src="/assets/gallery/merry-008-480.webp" srcset="/assets/gallery/merry-008-480.webp 480w, /assets/gallery/merry-008-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="White custom closet and entry cabinetry with a navy vanity"></a></figure>
               <figure class="wall__item" style="--ar:1.2222"><a href="/assets/gallery/roby-001-1200.webp" data-lb><img src="/assets/gallery/roby-001-480.webp" srcset="/assets/gallery/roby-001-480.webp 480w, /assets/gallery/roby-001-800.webp 800w" sizes="391px" width="480" height="393" loading="lazy" decoding="async" alt="Custom mudroom bench with navy beadboard and storage cabinets"></a></figure>
               <figure class="wall__item" style="--ar:1.0757"><a href="/assets/gallery/tony-001-1200.webp" data-lb><img src="/assets/gallery/tony-001-480.webp" srcset="/assets/gallery/tony-001-480.webp 480w, /assets/gallery/tony-001-800.webp 800w" sizes="344px" width="480" height="446" loading="lazy" decoding="async" alt="3D design preview of a custom double-sink vanity"></a></figure>
@@ -520,7 +600,6 @@
               <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/roby-003-1200.webp" data-lb><img src="/assets/gallery/roby-003-480.webp" srcset="/assets/gallery/roby-003-480.webp 480w, /assets/gallery/roby-003-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="Custom mudroom bench with navy beadboard and storage cabinets"></a></figure>
               <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/jimmy-017-1200.webp" data-lb><img src="/assets/gallery/jimmy-017-480.webp" srcset="/assets/gallery/jimmy-017-480.webp 480w, /assets/gallery/jimmy-017-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="Custom oak slat wall with floating vanity shelf and backlit mirror"></a></figure>
               <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/kip-connelly-005-1200.webp" data-lb><img src="/assets/gallery/kip-connelly-005-480.webp" srcset="/assets/gallery/kip-connelly-005-480.webp 480w, /assets/gallery/kip-connelly-005-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="Walnut floating shelves and white shaker base cabinets"></a></figure>
-              <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/jimmy-016-1200.webp" data-lb><img src="/assets/gallery/jimmy-016-480.webp" srcset="/assets/gallery/jimmy-016-480.webp 480w, /assets/gallery/jimmy-016-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="Custom oak slat wall with floating vanity shelf and backlit mirror"></a></figure>
               <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/kip-connelly-007-1200.webp" data-lb><img src="/assets/gallery/kip-connelly-007-480.webp" srcset="/assets/gallery/kip-connelly-007-480.webp 480w, /assets/gallery/kip-connelly-007-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="Walnut floating shelves and white shaker base cabinets"></a></figure>
               <figure class="wall__item" style="--ar:1.3333"><a href="/assets/gallery/kip-connelly-015-1200.webp" data-lb><img src="/assets/gallery/kip-connelly-015-480.webp" srcset="/assets/gallery/kip-connelly-015-480.webp 480w, /assets/gallery/kip-connelly-015-800.webp 800w" sizes="427px" width="480" height="360" loading="lazy" decoding="async" alt="Walnut floating shelves and white shaker base cabinets"></a></figure>
               <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/roby-002-1200.webp" data-lb><img src="/assets/gallery/roby-002-480.webp" srcset="/assets/gallery/roby-002-480.webp 480w, /assets/gallery/roby-002-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="Custom mudroom bench with navy beadboard and storage cabinets"></a></figure>
@@ -546,7 +625,6 @@
             </div>
             <div class="wall__track" aria-hidden="true">
               <figure class="wall__item" style="--ar:1.3333"><a href="/assets/gallery/kip-connelly-014-1200.webp" data-lb><img src="/assets/gallery/kip-connelly-014-480.webp" srcset="/assets/gallery/kip-connelly-014-480.webp 480w, /assets/gallery/kip-connelly-014-800.webp 800w" sizes="427px" width="480" height="360" loading="lazy" decoding="async" alt="Walnut floating shelves and white shaker base cabinets"></a></figure>
-              <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/konrady-005-1200.webp" data-lb><img src="/assets/gallery/konrady-005-480.webp" srcset="/assets/gallery/konrady-005-480.webp 480w, /assets/gallery/konrady-005-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="Custom white bathroom cabinetry and built-in display cabinets"></a></figure>
               <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/merry-008-1200.webp" data-lb><img src="/assets/gallery/merry-008-480.webp" srcset="/assets/gallery/merry-008-480.webp 480w, /assets/gallery/merry-008-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="White custom closet and entry cabinetry with a navy vanity"></a></figure>
               <figure class="wall__item" style="--ar:1.2222"><a href="/assets/gallery/roby-001-1200.webp" data-lb><img src="/assets/gallery/roby-001-480.webp" srcset="/assets/gallery/roby-001-480.webp 480w, /assets/gallery/roby-001-800.webp 800w" sizes="391px" width="480" height="393" loading="lazy" decoding="async" alt="Custom mudroom bench with navy beadboard and storage cabinets"></a></figure>
               <figure class="wall__item" style="--ar:1.0757"><a href="/assets/gallery/tony-001-1200.webp" data-lb><img src="/assets/gallery/tony-001-480.webp" srcset="/assets/gallery/tony-001-480.webp 480w, /assets/gallery/tony-001-800.webp 800w" sizes="344px" width="480" height="446" loading="lazy" decoding="async" alt="3D design preview of a custom double-sink vanity"></a></figure>
@@ -557,7 +635,6 @@
               <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/roby-003-1200.webp" data-lb><img src="/assets/gallery/roby-003-480.webp" srcset="/assets/gallery/roby-003-480.webp 480w, /assets/gallery/roby-003-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="Custom mudroom bench with navy beadboard and storage cabinets"></a></figure>
               <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/jimmy-017-1200.webp" data-lb><img src="/assets/gallery/jimmy-017-480.webp" srcset="/assets/gallery/jimmy-017-480.webp 480w, /assets/gallery/jimmy-017-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="Custom oak slat wall with floating vanity shelf and backlit mirror"></a></figure>
               <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/kip-connelly-005-1200.webp" data-lb><img src="/assets/gallery/kip-connelly-005-480.webp" srcset="/assets/gallery/kip-connelly-005-480.webp 480w, /assets/gallery/kip-connelly-005-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="Walnut floating shelves and white shaker base cabinets"></a></figure>
-              <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/jimmy-016-1200.webp" data-lb><img src="/assets/gallery/jimmy-016-480.webp" srcset="/assets/gallery/jimmy-016-480.webp 480w, /assets/gallery/jimmy-016-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="Custom oak slat wall with floating vanity shelf and backlit mirror"></a></figure>
               <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/kip-connelly-007-1200.webp" data-lb><img src="/assets/gallery/kip-connelly-007-480.webp" srcset="/assets/gallery/kip-connelly-007-480.webp 480w, /assets/gallery/kip-connelly-007-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="Walnut floating shelves and white shaker base cabinets"></a></figure>
               <figure class="wall__item" style="--ar:1.3333"><a href="/assets/gallery/kip-connelly-015-1200.webp" data-lb><img src="/assets/gallery/kip-connelly-015-480.webp" srcset="/assets/gallery/kip-connelly-015-480.webp 480w, /assets/gallery/kip-connelly-015-800.webp 800w" sizes="427px" width="480" height="360" loading="lazy" decoding="async" alt="Walnut floating shelves and white shaker base cabinets"></a></figure>
               <figure class="wall__item" style="--ar:0.7500"><a href="/assets/gallery/roby-002-1200.webp" data-lb><img src="/assets/gallery/roby-002-480.webp" srcset="/assets/gallery/roby-002-480.webp 480w, /assets/gallery/roby-002-800.webp 800w" sizes="240px" width="480" height="640" loading="lazy" decoding="async" alt="Custom mudroom bench with navy beadboard and storage cabinets"></a></figure>
@@ -793,5 +870,6 @@
   </div>
 
   <script src="/js/main.js" defer></script>
+  <script src="/js/cabinet3d.js" defer></script>
 </body>
 </html>
