@@ -75,7 +75,7 @@
    Base
    -------------------------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
@@ -394,7 +394,7 @@ body.nav-open .brand__logo--dark { display: block; }
 /* --------------------------------------------------------------------------
    Sections
    -------------------------------------------------------------------------- */
-.section { padding-block: var(--section); position: relative; clip-path: inset(0); } /* clips the deco pieces without breaking sticky children */
+.section { padding-block: var(--section); position: relative; clip-path: inset(0); overflow-x: clip; } /* clip-path hides the deco pieces, overflow-x: clip keeps them from widening the page on mobile (neither breaks sticky) */
 
 /* --------------------------------------------------------------------------
    Logo fragments: pieces of the Ocean Bay mark (flourishes, wood grain, bricks,
@@ -775,7 +775,9 @@ body.nav-open .brand__logo--dark { display: block; }
   align-self: start;
 }
 @media (min-width: 60em) { .info-card { position: sticky; top: calc(var(--nav-h) + 1.5rem); } }
-#contact { padding-bottom: calc(var(--section) + 3.5rem); }
+/* Last section before the footer clears the contact bar, which rises half its height over it (3 stacked tiles on phones) */
+#contact, .page-gallery .gallery-page { padding-bottom: calc(var(--section) + var(--bar-clear, 9.5rem)); }
+@media (min-width: 48em) { :root { --bar-clear: 3.5rem; } }
 .info-card__title { font-size: var(--fs-2); font-weight: 800; color: var(--navy); padding-left: var(--s-3); border-left: 3px solid var(--copper); margin: 0 0 var(--s-4); line-height: 1.2; }
 .info-card__title + .info-card__title { margin-top: var(--s-6); }
 .info-list { display: grid; gap: var(--s-3); margin-bottom: var(--s-6); font-size: var(--fs-1); }
@@ -1200,3 +1202,14 @@ body.pv-open { overflow: hidden; }
 .greview.is-open .greview__text p { -webkit-line-clamp: unset; display: block; }
 .greview__more { align-self: flex-start; margin-top: auto; padding: 0; border: 0; background: none; cursor: pointer; color: var(--copper); font-weight: 700; font-size: var(--fs-0); text-transform: uppercase; letter-spacing: 0.06em; min-height: 2.25rem; }
 .greview__more[hidden] { display: none; }@media (max-width: 39.99em) { .greviews__actions { width: 100%; } .greviews__actions .btn { flex: 1 1 100%; } }
+
+/* Review pass 2026-09-28 */
+/* Why: the 5th item sits alone on the 2-column mobile grid; center it across both columns */
+@media (max-width: 63.99em) { .why-grid > .why-item:last-child:nth-child(odd) { grid-column: 1 / -1; max-width: 50%; justify-self: center; } }
+/* The orange bottom bar already clears the sticky call bar; no extra navy strip under it */
+.site-footer { padding-bottom: 0; }
+/* 3D hint: one short line, never under the zoom buttons */
+.model3d__hint { white-space: nowrap; max-width: none; left: 50%; }
+@media (max-width: 39.99em) { .model3d__hint { left: calc(50% - 1.5rem); font-size: 0.68rem; padding: 0.4rem 0.75rem; } }
+.page-simple .footer__bottom { margin-top: 0; } .page-simple .footer__bottom-in { padding-bottom: var(--s-4); } /* no sticky call bar on these pages */
+a[href^="tel:"] { white-space: nowrap; } /* never split a phone number */
