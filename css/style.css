@@ -327,9 +327,8 @@ body.nav-open .brand__logo--dark { display: block; }
     radial-gradient(ellipse 110% 95% at 0% 100%, rgba(11, 29, 51, 0.96) 0%, rgba(11, 29, 51, 0.82) 40%, rgba(11, 29, 51, 0.4) 70%, rgba(11, 29, 51, 0) 100%),
     linear-gradient(to top, rgba(11, 29, 51, 0.6) 0%, rgba(11, 29, 51, 0) 22%);
 }
-/* Bottom padding = half the benefits pill (it overlaps the hero edge) + a small gap */
 .hero__content {
-  padding-block: clamp(3rem, 6vw, 6rem) 6rem; /* ≈ 60px visible gap above the marquee (half of it hangs into the hero) */
+  padding-block: clamp(3rem, 6vw, 6rem) clamp(2.5rem, 5vw, 4.5rem);
   max-width: 72rem; /* wide enough for "built for life in Little River, SC" on one line */
 }
 /* Capped at 3.5rem so "built for life in Little River, SC" fits the container on one line */
@@ -355,42 +354,6 @@ body.nav-open .brand__logo--dark { display: block; }
   .hero__content > :nth-child(2) { animation-delay: 0.25s; }
   @keyframes hero-rise { to { opacity: 1; transform: none; } }
 }
-/* Trust card: floats across the fold, half over the video, half over the next section */
-/* Out of the grid flow so the copy can sit right above it; half of the pill hangs below the hero. */
-.hero__strip { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; color: var(--navy); transform: translateY(50%); }
-/* Pill: white, fully rounded, copper dot + one line per benefit (no icons, no dividers) */
-/* Full-bleed white band, edge to edge; items run continuously across the viewport */
-.hero__strip-list {
-  --strip-h: 3.5rem; /* fixed height so the section below can clear exactly half of it */
-  height: var(--strip-h); display: flex; align-items: center;
-  overflow: hidden; background: var(--paper);
-  border-bottom: 1px solid var(--line);
-}
-/* Marquee: 3 identical groups; slide by one group (a third) and loop */
-.marquee__track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
-.hero__strip-list:hover .marquee__track { animation-play-state: paused; }
-/* Spacing lives on each item (half per side) so item-to-item and group-to-group gaps are identical */
-.marquee__group { display: flex; flex: none; }
-.marquee__group li {
-  display: flex; align-items: center; gap: var(--s-3); white-space: nowrap;
-  padding-inline: clamp(1.25rem, 2.5vw, 2.5rem);
-  font-size: var(--fs-1); font-weight: 600; line-height: 1.25;
-}
-.marquee__group li::before {
-  content: ""; flex: none; width: 0.9rem; height: 0.9rem; border-radius: 50%;
-  background: var(--copper-gloss); box-shadow: 0 2px 6px -1px rgba(197, 104, 53, 0.6);
-}
-@keyframes marquee { to { transform: translateX(calc(-100% / 3)); } }
-@media (prefers-reduced-motion: reduce) { .marquee__track { animation: none; } }
-/* Next section makes room for the overlapping half of the card */
-.hero + .section { padding-top: calc(var(--section) + 3rem); }
-@media (min-width: 64em) {
-  .hero__strip-list { --strip-h: 4.5rem; }
-  .marquee__group li { font-size: var(--fs-2); }
-  .marquee__group li::before { width: 1.25rem; height: 1.25rem; }
-  .hero + .section { padding-top: calc(var(--section) + 2.5rem); }
-}
-
 /* --------------------------------------------------------------------------
    Sections
    -------------------------------------------------------------------------- */
@@ -440,9 +403,6 @@ body.nav-open .brand__logo--dark { display: block; }
 /* About: split editorial. Photo bleeds to the left edge at full height; copy sits in the right column,
    aligned to the page container. Section padding is on the text column, not the section. */
 .about-section { padding-block: 0; }
-/* Clear exactly the half of the marquee that hangs into this section (strip height / 2, + its 1px border) */
-.hero + .about-section { padding-top: calc(1.75rem + 1px); }
-@media (min-width: 64em) { .hero + .about-section { padding-top: calc(2.25rem + 1px); } }
 .about { display: grid; }
 .about__media { margin: 0; }
 .about__media img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 58%; }
@@ -451,20 +411,6 @@ body.nav-open .brand__logo--dark { display: block; }
 .about__text .h2 { font-size: clamp(1.5rem, 1.1rem + 1.3vw, 2rem); }
 .about__p { color: var(--ink-3); line-height: 1.6; max-width: 56ch; margin-top: var(--s-4); }
 .about__p + .about__p { margin-top: var(--s-3); }
-/* Stamps: round seal badges (double ring, dashed inner) with the number and a tiny label inside */
-.stamps { display: flex; flex-wrap: wrap; gap: var(--s-4) var(--s-5); margin-top: var(--s-5); }
-.stamp {
-  --stamp: 7rem;
-  position: relative; width: var(--stamp); height: var(--stamp); border-radius: 50%;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
-  background: var(--wood-soft); color: var(--wood); border: 2px solid var(--wood);
-  transform: rotate(-6deg);
-}
-.stamp::before { content: ""; position: absolute; inset: 5px; border-radius: 50%; border: 1px dashed var(--wood); opacity: 0.7; }
-.stamp:nth-child(2) { transform: rotate(4deg); }
-.stamp:nth-child(3) { transform: rotate(-3deg); }
-.stamp strong { font-family: var(--font-display); font-size: 1.75rem; font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
-.stamp span { margin-top: 0.2rem; font-size: 0.6rem; font-weight: 700; line-height: 1.15; letter-spacing: 0.1em; text-transform: uppercase; }
 .about__text .section__cta { margin-top: var(--s-5); }
 @media (min-width: 60em) {
   /* 4 tracks: [edge gutter][left half of container][right half of container][edge gutter].
@@ -923,11 +869,7 @@ a.contact-bar__item--accent:hover .contact-bar__arrow { transform: translateX(4p
   .reveal [data-stagger] > * { opacity: 0; transform: translateY(26px); transition: opacity 0.7s var(--reveal-ease), transform 0.7s var(--reveal-ease); transition-delay: calc(0.15s + var(--i, 0) * 0.09s); }
   .reveal.is-in [data-stagger] > * { opacity: 1; transform: none; }
 
-  /* Pops: stamps and why-icons scale in with a little overshoot */
-  .reveal .stamp { transform: scale(0.6) rotate(-14deg); transition-timing-function: var(--pop-ease), var(--pop-ease); }
-  .reveal.is-in .stamp:nth-child(1) { transform: rotate(-6deg); }
-  .reveal.is-in .stamp:nth-child(2) { transform: rotate(4deg); }
-  .reveal.is-in .stamp:nth-child(3) { transform: rotate(-3deg); }
+  /* Pops: why-icons scale in with a little overshoot */
   .reveal .why-item__icon { transform: scale(0.5); transition: transform 0.8s var(--pop-ease), background-color 0.3s var(--ease); }
   .reveal.is-in .why-item__icon { transform: none; }
   .reveal.is-in .why-item:hover .why-item__icon { transform: translateY(-4px); }
@@ -941,7 +883,9 @@ a.contact-bar__item--accent:hover .contact-bar__arrow { transform: translateX(4p
   .reveal .about__text > :nth-child(3) { transition-delay: 0.35s; }
   .reveal .about__text > :nth-child(4) { transition-delay: 0.45s; }
   .reveal .about__text > :nth-child(5) { transition-delay: 0.55s; }
-  .reveal .about__text > :nth-child(6) { transition-delay: 0.7s; }
+  .reveal .about__text > :nth-child(6) { transition-delay: 0.65s; }
+  .reveal .about__text > :nth-child(7) { transition-delay: 0.75s; }
+  .reveal .about__text > :nth-child(8) { transition-delay: 0.9s; }
   .reveal.is-in .about__text > * { opacity: 1; transform: none; }
 
   .reveal .services__wrap, .reveal .wall, .reveal .greviews, .reveal .faq__list, .reveal .section__cta {
